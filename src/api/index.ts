@@ -2,6 +2,8 @@ import express from 'express';
 
 import MessageResponse from '../interfaces/MessageResponse';
 import emojis from './emojis';
+import jhope from './jhope';
+
 
 const router = express.Router();
 
@@ -12,5 +14,6 @@ router.get<{}, MessageResponse>('/', (req, res) => {
 });
 
 router.use('/emojis', emojis);
+router.use('/jhope',jhope)
 
 export default router;
