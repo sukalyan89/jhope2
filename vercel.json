@@ -1,8 +1,8 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
- 
-"routes": [
-    { "src": "/socket.io/(.*)", "dest": "/api/index.ts" },
+{"builds": [
+    { "src": "api/socket.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/socket.io/(.*)", "dest": "/api/socket.js" },
     { "src": "/", "dest": "/public/index.html" }
   ]
-
 }
